@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+th {
+    background-color: #25c9e6;
+    color: white;
+}
+
+
+body {
+    background-image: url(../images/bg.png);
+    background-color: #c6c7cf;
+    background-size: 2100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Nume</th>
+            <th>Pret</th>
+            <th>Stoc</th>
+            <th>Gramaj</th>
+            <th>Data_Fabricatie</th>
+            <th>Data_Expirarii</th>
+            <th>Categorie</th>
+        </tr>
+
+        {% for product in products %}
+        <tr>
+            <td>{{ product.Nume }}</td>
+            <td>{{ product.Pret }} lei</td>
+            <td>{{ product.Stoc }}</td>
+            <td>{{ product.Gramaj }} grame</td>
+            <td>{{ product.Data_fabricatiei }}</td>
+            <td>{{ product.Data_expirarii }}</td>
+            <td>{{ product.Categorie }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    
+    <br>
+    <form action="/D:/ETTI/An%202/S2/Baze%20de%20Date/Laborator/Magazin%20Online/index.html" method="POST" style="text-align:center;">
+        <button type="submit" class="btn btn-primary">Pagina Principala</button>
+    </form>
+    <br>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina de pornire</title>
+    <style>
+        body {
+            background-image: url(../images/bg.png);
+            background-color: #c6c7cf;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Magazin Online</h1>
+    <h3 style="text-align:center;">-pagina de pornire-</h3>
+
+    <!-- inserare, actualizare, ștergere a datelor, în minim 1 tabel -->
+    <form action="operatiiModificare1.html" method="POST" style="text-align:center;">
+        <button submit="button">Operatii Modificare Produse</button>
+        <p>Permite realizarea operatiilor de <b>insert, update, delete</b> asupra datelor din tabelul <b>Produse</b>.
+        </p>
+    </form><br>
+
+    <form action="operatiiModificare2.html" method="POST" style="text-align:center;">
+        <button submit="button">Operatii Modificare Categorii</button>
+        <p>Permite realizarea operatiilor de <b>insert, update, delete</b> asupra datelor din tabelul <b>Categorii</b>.
+        </p>
+    </form><br>
+
+    <!-- vizualizare date din minim 3 tabele -->
+    <form action="interogare_simpla_1.html" method="POST" style="text-align:center;">
+        <button submit="button">Interogare Produse</button>
+        <p>Afiseaza <b>Nume, Pret, Stoc, Gramaj, Data_fabricatie, Data_expirarii, Categorie</b> pentru inregistrarile
+            din tabelul <b>Produse</b>.</p>
+    </form><br>
+
+    <form action="interogare_simpla_2.html" method="POST" style="text-align:center;">
+        <button submit="button">Interogare Categorii</button>
+        <p>Afiseaza <b>Nume</b> pentru inregistrarile din tabelul <b>Categorii</b>.</p>
+    </form><br>
+
+    <form action="interogare_simpla_3.html" method="POST" style="text-align:center;">
+        <button submit="button">Interogare Detalii_comanda</button>
+        <p>Afiseaza <b>Cantitate, Produs, Comanda</b> pentru inregistrarile din tabelul <b>Detalii_comanda</b>.</p>
+    </form><br>
+
+    <!-- mai jos urmeaza inca 5 butoane pt ultimele 4 cerinte -->
+    <form action="interfata_interogare_1.html" method="POST" style="text-align:center;">
+        <button submit="button">Interogare Complexa Produse</button>
+        <p>Afiseaza <b>Nume, Pret, Stoc, Gramaj, Data_fabricatiei, Data_expirarii, Categorie</b> pentru produse in functie de anumite criterii.</p>
+    </form><br>
+
+    <form action="interfata_interogare_2.html" method="POST" style="text-align:center;">
+        <button submit="button">Interogare Complexa Detalii Comenzi</button>
+        <p>Afiseaza <b>Id_comanda, Data_comenzii, Client_nume, Client_prenume, Client_email, Angajat_nume, Angajat_prenume, 
+            Produs_Nume, Cantitate, Pret, Total</b> pentru fiecare comanda.</p>
+    </form><br>
+
+    <form action="interfata_interogare_3.html" method="POST" style="text-align:center;">
+        <button submit="button">Subinterogare</button>
+        <p>Afiseaza <b>Id_comanda, Data_comenzii, Client_nume, Client_prenume, Client_email, Angajat_nume, Angajat_prenume</b> 
+            pentru toate comenzile împreună cu suma totală pentru fiecare comandă.</p>
+    </form><br>
+
+    <form action="interfata_interogare_4.html" method="POST" style="text-align:center;">
+        <button submit="button">Functii</button>
+        <p>Afiseaza <b>Id_angajat, Nume_Complet, Salariu_Formatat</b> 
+            al angajatilor, precum si <b>Nume_Produs, Total_Vanzari</b> a vânzărilor.</p>
+        
+    </form><br>
+
+    
+</body>

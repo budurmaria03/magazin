@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+        
+table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+        
+th, td {
+        text-align: left;
+        padding: 8px;
+        }
+        
+tr:nth-child(even) {background-color: #f2f2f2}
+        
+th {
+    background-color: #25c9e6;
+    color: white;
+        }
+        
+body {
+        background-image: url(../images/bg.png);
+        background-color: #c6c7cf;
+        background-size: 2100px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container my-5">
+        <h2>Lista produse in functie de pret</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Pret</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in results1 %}
+                <tr>
+                    <td>{{ product.Nume }}</td>
+                    <td>{{ product.Pret }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Lista produse in functie de stoc</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Stoc</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in results2 %}
+                <tr>
+                    <td>{{ product.Nume }}</td>
+                    <td>{{ product.Stoc }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Lista produse ordonate alfabetic dupa nume</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Pret</th>
+                    <th>Stoc</th>
+                    <th>Gramaj</th>
+                    <th>Data_fabricatie</th>
+                    <th>Data_expirarii</th>
+                    <th>Categorie</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in results3 %}
+                <tr>
+                    <td>{{ product.Nume }}</td>
+                    <td>{{ product.Pret }} lei</td>
+                    <td>{{ product.Stoc }}</td>
+                    <td>{{ product.Gramaj }} grame</td>
+                    <td>{{ product.Data_fabricatiei }}</td>
+                    <td>{{ product.Data_expirarii }}</td>
+                    <td>{{ product.Categorie }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Lista produse limitate la un anumit numar pe pagina</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Pret</th>
+                    <th>Stoc</th>
+                    <th>Gramaj</th>
+                    <th>Data_fabricatie</th>
+                    <th>Data_expirarii</th>
+                    <th>Categorie</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in results4 %}
+                <tr>
+                    <td>{{ product.Nume }}</td>
+                    <td>{{ product.Pret }} lei</td>
+                    <td>{{ product.Stoc }}</td>
+                    <td>{{ product.Gramaj }} grame</td>
+                    <td>{{ product.Data_fabricatiei }}</td>
+                    <td>{{ product.Data_expirarii }}</td>
+                    <td>{{ product.Categorie }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Lista cu categoriile de produse in functie de stoc</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Categorie</th>
+                    <th>Pret_mediu</th>
+                    <th>Stoc_total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in results5 %}
+                <tr>
+                    <td>{{ product.Categorie }}</td>
+                    <td>{{ product.Pret_mediu }} lei</td>
+                    <td>{{ product.Stoc_total }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    <br>
+    <form action="index.html" method="POST" style="text-align:center;">
+    <button type="submit" class="btn btn-primary">Pagina Principala</button>
+    </form>
+    <br>
+    </div>
+</body>
+</html>

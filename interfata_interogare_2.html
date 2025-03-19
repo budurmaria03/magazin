@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+        
+table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+        
+th, td {
+        text-align: left;
+        padding: 8px;
+        }
+        
+tr:nth-child(even) {background-color: #f2f2f2}
+        
+th {
+    background-color: #25c9e6;
+    color: white;
+        }
+        
+body {
+        background-image: url(../images/bg.png);
+        background-color: #c6c7cf;
+        background-size: 2100px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container my-5">
+        <h2>Lista de comenzi cu detalii despre client și angajatul care a gestionat comanda</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id_comnada</th>
+                    <th>Data_comenzii</th>
+                    <th>Client_nume</th>
+                    <th>Client_prenume</th>
+                    <th>Client_email</th>
+                    <th>Angajat_nume</th>
+                    <th>Angajat_prenume</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in results1 %}
+                <tr>
+                    <td>{{ product.Id_comanda }}</td>
+                    <td>{{ product.Data_comenzii }}</td>
+                    <td>{{ product.Client_nume }}</td>
+                    <td>{{ product.Client_prenume }}</td>
+                    <td>{{ product.Client_email }}</td>
+                    <td>{{ product.Angajat_nume }}</td>
+                    <td>{{ product.Angajat_prenume }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Lista pentru toate detaliile comenzii, inclusiv informații despre produs pentru o anumită comandă</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id_comanda</th>
+                    <th>Produs_Nume</th>
+                    <th>Cantitate</th>
+                    <th>Pret</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in results2 %}
+                <tr>
+                    <td>{{ product.Id_comanda }}</td>
+                    <td>{{ product.Produs_Nume }}</td>
+                    <td>{{ product.Cantitate }}</td>
+                    <td>{{ product.Pret }}</td>
+                    <td>{{ product.Total }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+       
+
+    <br>
+    <form action="index.html" method="POST" style="text-align:center;">
+    <button type="submit" class="btn btn-primary">Pagina Principala</button>
+    </form>
+    <br>
+    </div>
+</body>
+</html>

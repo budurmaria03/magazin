@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+        
+table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+        
+th, td {
+        text-align: left;
+        padding: 8px;
+        }
+        
+tr:nth-child(even) {background-color: #f2f2f2}
+        
+th {
+    background-color: #25c9e6;
+    color: white;
+        }
+        
+body {
+        background-image: url(../images/bg.png);
+        background-color: #c6c7cf;
+        background-size: 2100px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container my-5">
+        <h2>Lista pentru toate comenzile împreună cu suma totală pentru fiecare comandă</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id_comnada</th>
+                    <th>Data_comenzii</th>
+                    <th>Client_nume</th>
+                    <th>Client_prenume</th>
+                    <th>Client_email</th>
+                    <th>Angajat_nume</th>
+                    <th>Angajat_prenume</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in results1 %}
+                <tr>
+                    <td>{{ product.Id_comanda }}</td>
+                    <td>{{ product.Data_comenzii }}</td>
+                    <td>{{ product.Client_nume }}</td>
+                    <td>{{ product.Client_prenume }}</td>
+                    <td>{{ product.Client_email}}</td>
+                    <td>{{ product.Angajat_nume }}</td>
+                    <td>{{ product.Angajat_prenume }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <br>
+    <form action="index.html" method="POST" style="text-align:center;">
+    <button type="submit" class="btn btn-primary">Pagina Principala</button>
+    </form>
+    <br>
+    </div>
+</body>
+</html>

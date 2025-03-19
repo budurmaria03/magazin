@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+th {
+    background-color: #25c9e6;
+    color: white;
+}
+
+
+body {
+    background-image: url(../images/bg.png);
+    background-color: #c6c7cf;
+    background-size: 2100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+
+</style>
+</head>
+<body>
+    <div class="container my-5">
+        <h2>Lista pentru salariul mediu al angajaților, precum și cel mai mare salariu al angajaților</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Id_angajat</th>
+                <th>Nume_Complet</th>
+                <th>Salariu_Formatat</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.Id_angajat }}</td>
+            <td>{{ product.Nume_Complet }} lei</td>
+            <td>{{ product.Salariu_Format }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Lista pentru numele fiecărui produs și suma totală a vânzărilor</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nume_Produs</th>
+                    <th>Total_Vanzari</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in results2 %}
+                <tr>
+                    <td>{{ product.Nume_Produs }}</td>
+                    <td>{{ product.Total_Vanzari }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+    <br>
+    <form action="index.html" method="POST" style="text-align:center;">
+        <button type="submit" class="btn btn-primary">Pagina Principala</button>
+    </form>
+    <br>
+
+</body>
+</html>
